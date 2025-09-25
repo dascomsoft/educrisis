@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+ 📊 EduCrisis Dashboard
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A modern **Next.js dashboard** that visualizes ~2,350 schools in Cameroon and tracks **primary enrollment trends** using **OpenStreetMap (HOTOSM/HDX)** and **World Bank data**.  
+Built with **React, TailwindCSS, Leaflet, and Chart.js** — clean, responsive, and portfolio‑ready.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 Features
 
-## Learn More
+- **Key Indicators (KPIs)**: total schools, breakdown by type (kindergartens, primary/secondary, colleges, universities).
+- **Interactive Map**: Leaflet map with ~2,350 geolocated schools, popups showing name, type, and city.
+- **Dynamic Chart**: World Bank API integration to display net primary enrollment trends over time.
+- **Modern UI/UX**: TailwindCSS styling, gradient headers, responsive cards, and professional dashboard layout.
+- **Modular Architecture**: reusable components, service layer for data, clean and scalable structure.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📂 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+app/
+ ├─ page.js                → Main dashboard page
+ ├─ services/
+ │    └─ hdx.js            → Service to load schools.geojson
+components/
+ ├─ Header.jsx             → Header with navigation
+ ├─ Footer.jsx             → Footer with credits
+ ├─ KPIStats.jsx           → Key indicators
+ ├─ SchoolsMap.jsx         → Interactive Leaflet map
+ └─ EnrollmentChart.jsx    → World Bank chart
+public/
+ └─ data/
+      └─ schools.geojson   → GeoJSON dataset (~2,350 schools)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+ 🌍 Data Sources
+
+- **Schools**: `schools.geojson` (~2,350 schools) from [HOTOSM/HDX](https://data.humdata.org/).  
+- **Enrollment Indicator**: World Bank API  
+  - Country: Cameroon (`CMR`)  
+  - Indicator: `SE.PRM.NENR` (Net primary school enrollment rate)
+
+
+ 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) – React framework
+- [React](https://react.dev/) – UI components
+- [TailwindCSS](https://tailwindcss.com/) – Styling
+- [Leaflet](https://leafletjs.com/) – Interactive maps
+- [Chart.js](https://www.chartjs.org/) + [react-chartjs-2](https://react-chartjs-2.js.org/) – Data visualization
+
+
+ 🎯 Purpose
+
+EduCrisis Dashboard was designed to:  
+- Support **NGOs and humanitarian actors** in monitoring educational infrastructures.  
+- Showcase **technical expertise** in Next.js, React, Tailwind, and data visualization.  
+- Provide a **portfolio-ready project** demonstrating real-world impact and professional design.
+
+
+
+
